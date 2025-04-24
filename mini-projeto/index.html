@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini - Projeto</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <header>
+        <input type="text" id="busca" onkeyup="pesquisarTarefas()" placeholder="Pesquisar por titulo">
+    </header>
+    <main>
+        <section id="tarefas">
+            <h2>Tarefas <button onclick="abrirModal()">Nova Tarefa</button></h2>
+            <!--<h6>Nenhuma tarefa registrada</h6> -->
+            <ul id="lista"></ul>
+        </section>
+        <section id="overlay" onclick="fecharModal()"></section>
+        <div id="criarTarefa" class="modal">
+            <form onsubmit="novaTarefa()">
+                <h3>Criar tarefa <i class='bx bx-x-circle' onclick="fecharModal()"></i></h3>
+                <label for="titulo">Titulo</label>
+                <input type="text" id="titulo" required>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" required></textarea>
+                <button>Criar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
